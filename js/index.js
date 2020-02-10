@@ -58,7 +58,7 @@ let heading1 = document.querySelector("h1");
 heading1.textContent = siteContent["cta"]["h1"];
 
 let domButton = document.querySelector(["button"]);
-domButton.textContent = "Get Started";
+domButton.textContent = siteContent["cta"]["button"];
 
 let codeCircle = document.getElementById("cta-img");
 codeCircle.setAttribute("src", siteContent["cta"]["img-src"]);
@@ -69,5 +69,16 @@ featuresH4.textContent = "Features";
 let featuresContent = document.querySelector(["p"]);
 featuresContent.textContent = siteContent["main-content"]["features-content"];
 
-let aboutH4 = document.querySelector("h4:last-child");
-aboutH4.textContent = siteContent["main-content"]["about-h4"];
+let aboutH4 = document.querySelectorAll(".top-content h4");
+aboutH4[1].textContent = siteContent["main-content"]["about-h4"];
+
+let aboutP = document.querySelectorAll(".main-content p");
+aboutP[1].textContent = siteContent["main-content"]["about-content"];
+
+let midImg = document.getElementById("middle-img");
+midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+let bottomH4 = document.querySelectorAll(".bottom-content h4");
+let bottomP = document.querySelectorAll(".bottom-content p");
+
+bottomH4[0] = siteContent["main-content"]["services-h4"];
