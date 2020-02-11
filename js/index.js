@@ -54,6 +54,11 @@ navigation[3].textContent = "Features";
 navigation[4].textContent = "About";
 navigation[5].textContent = "Contact";
 
+Array.from(navigation).forEach(navigation => {
+    navigation.style.color = "green";
+    // navigation.prepend("test");
+});
+
 let heading1 = document.querySelector("h1");
 heading1.textContent = siteContent["cta"]["h1"];
 
@@ -99,3 +104,10 @@ contactInfo[2].textContent = siteContent["contact"]["email"];
 
 let footerArea = document.querySelector("footer p");
 footerArea.textContent = siteContent["footer"]["copyright"];
+
+const newNavLinks = document.createElement("nav a", "href='#");
+newNavLinks[0] = "testLink";
+newNavLinks[1] = "testZelda";
+
+const links = document.querySelector("nav");
+links.prepend(newNavLinks[0]);
