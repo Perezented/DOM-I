@@ -54,15 +54,14 @@ navigation[3].textContent = "Features";
 navigation[4].textContent = "About";
 navigation[5].textContent = "Contact";
 
-Array.from(navigation).forEach(navigation => {
-    navigation.style.color = "green";
-    // navigation.prepend("test");
-});
+// Array.from(navigation).forEach(navigation => {
+//     navigation.style.color = "green";
+// }); /////GOT MOVED TO THE BOTTOM OF THE PAGE
 
-let heading1 = document.querySelector("h1");
+const heading1 = document.querySelector("h1");
 heading1.textContent = siteContent["cta"]["h1"];
 
-let domButton = document.querySelector(["button"]);
+const domButton = document.querySelector(["button"]);
 domButton.textContent = siteContent["cta"]["button"];
 
 let codeCircle = document.getElementById("cta-img");
@@ -94,20 +93,34 @@ bottomP[0].textContent = siteContent["main-content"]["services-content"];
 bottomP[1].textContent = siteContent["main-content"]["product-content"];
 bottomP[2].textContent = siteContent["main-content"]["vision-content"];
 
-let contact = document.querySelector(".contact h4");
+const contact = document.querySelector(".contact h4");
 contact.textContent = siteContent["contact"]["contact-h4"];
 
-let contactInfo = document.querySelectorAll(".contact p");
+const contactInfo = document.querySelectorAll(".contact p");
 contactInfo[0].textContent = siteContent["contact"]["address"];
 contactInfo[1].textContent = siteContent["contact"]["phone"];
 contactInfo[2].textContent = siteContent["contact"]["email"];
 
-let footerArea = document.querySelector("footer p");
+const footerArea = document.querySelector("footer p");
 footerArea.textContent = siteContent["footer"]["copyright"];
 
-const newNavLinks = document.createElement("nav a", "href='#");
-newNavLinks[0] = "testLink";
-newNavLinks[1] = "testZelda";
+const testLink = ["testLink", "testZelda"];
+testLink[0].link("#");
+document.querySelector("nav").append(testLink[0]);
+document.querySelector("nav").prepend(testLink[1]);
 
-const links = document.querySelector("nav");
-links.prepend(newNavLinks[0]);
+function addLink(navText) {
+    html = document.documentElement.innerHTML;
+    link = "#";
+    re = new RegExp(navText, "g");
+    if (re.test(html)) {
+        html = html.replace(re, '<a href="' + link + '">' + navText + "</a>");
+    }
+    document.documentElement.innerHTML = html;
+}
+addLink(testLink[0]);
+addLink(testLink[1]);
+
+Array.from(navigation).forEach(navigation => {
+    navigation.style.color = "green";
+});
