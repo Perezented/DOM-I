@@ -48,3 +48,8 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 let navigation = document.getElementsByTagName("a");
 navigation[0].textContent = siteContent["nav"]["nav-item-1"];
+navigation[1].textContent = siteContent["nav"]["nav-item-2"];
+navigation[2].textContent = siteContent["nav"]["nav-item-3"];
+navigation[3].textContent = siteContent["nav"]["nav-item-4"];
+navigation[4].textContent = siteContent["nav"]["nav-item-5"];
+navigation[5].textContent = siteContent["nav"]["nav-item-6"];
