@@ -75,3 +75,6 @@ allP[1].textContent = siteContent["main-content"]["about-content"];
 allP[2].textContent = siteContent["main-content"]["product-content"];
 allP[3].textContent = siteContent["main-content"]["vision-content"];
 allP[4].textContent = siteContent["main-content"]["vision-content"];
+
+document.getElementById("middle-img").src =
+    siteContent["main-content"]["middle-img-src"];
