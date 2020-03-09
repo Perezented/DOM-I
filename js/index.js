@@ -81,7 +81,11 @@ document.getElementById("middle-img").src =
 
 document.querySelector(".contact h4").textContent =
     siteContent["contact"]["contact-h4"];
+
 let contactP = document.querySelectorAll(".contact p");
 contactP[0].textContent = siteContent["contact"]["address"];
 contactP[1].textContent = siteContent["contact"]["phone"];
 contactP[2].textContent = siteContent["contact"]["email"];
+
+document.querySelector("footer p").textContent =
+    siteContent["footer"]["copyright"];
