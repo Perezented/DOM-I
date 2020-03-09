@@ -61,3 +61,17 @@ let circle = document.getElementById("cta-img");
 circle.setAttribute("src", siteContent["cta"]["img-src"]);
 
 document.querySelector("button").textContent = siteContent["cta"]["button"];
+
+let allH4 = document.querySelectorAll(".text-content h4");
+allH4[0].textContent = siteContent["main-content"]["features-h4"];
+allH4[1].textContent = siteContent["main-content"]["about-h4"];
+allH4[2].textContent = siteContent["main-content"]["product-h4"];
+allH4[3].textContent = siteContent["main-content"]["vision-h4"];
+allH4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let allP = document.querySelectorAll(".text-content p");
+allP[0].textContent = siteContent["main-content"]["features-content"];
+allP[1].textContent = siteContent["main-content"]["about-content"];
+allP[2].textContent = siteContent["main-content"]["product-content"];
+allP[3].textContent = siteContent["main-content"]["vision-content"];
+allP[4].textContent = siteContent["main-content"]["vision-content"];
